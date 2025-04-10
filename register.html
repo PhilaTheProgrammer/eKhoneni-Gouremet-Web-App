@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" description="Phila Mkhize">
+    <meta name="description" content="This is the Ekhoneni Gourmet website. A local fast food resturant.">
+    
+    <link rel="stylesheet" href="register.css">
+    
+    <!-- BOX ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <title>Ekhoneni Gourmet: The Local Fast Food Resturant</title>
+</head>
+
+<body>
+
+    <section class="regContainer">
+        <button type="button" id ="rgBackBTN" onclick="rgBackBTN();">BACK</button>
+        
+        <form id="registrationForm">
+            <h2>Register</h2>
+          
+                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Username" name="Username" id='regUsername' required>
+           
+                <i class='bx bxl-gmail'></i>
+                <input type="text" placeholder="Gmail" name="Gmail" id='regMail' required>
+           
+                <i class='bx bxs-phone'></i>
+                <input type="tel" placeholder="Cellphone" name="Cellphone" id='regCellphone' required>
+          
+                <i class='bx bxs-lock-alt'></i>
+                 <input type="password" placeholder="Password" name="Password" id="regPassword" required>
+           
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="Confirm Password" name="Confirm Password" id="regConPassword" required>
+
+           <button type="button" id="rgBTN" onclick="rgBTN();">REGISTER</button> 
+        </form>
+    </section>
+
+<script>
+
+        function rgBTN(){
+            document.getElementsById("rgBTN").addEventListener("click", function(){
+            window.location.href="login.html"; 
+        });
+
+        let rgname= document.getElementById("regUsername");
+        alert("Welcome " + rgname + ". ");
+}
+       document.getElementById('rgBTN').addEventListener("click", function(){
+       window.location.href="login.html";
+       });
+
+       document.getElementById("rgBackBTN").addEventListener("click", function(){
+        window.location.href="index.html";
+    });
+    
+/* Here */
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // Get form values
+    const username = document.getElementById('regUsername').value.trim();
+    const email = document.getElementById('regMail').value.trim();
+    const cellphone = document.getElementById('regCellphone').value.trim();
+    const password = document.getElementById('regPassword').value;
+    const confirmPassword = document.getElementById('regConPassword').value;
+    
+    // Regular expressions for validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const phonePattern = /^\d{10}$/;  // For a 10-digit phone number (adjust if needed)
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Minimum 8 characters, at least one letter and one number
+
+    // Validation checks
+    if (username.length < 3) {
+        alert("Username must be at least 3 characters long.");
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (!phonePattern.test(cellphone)) {
+        alert("Cellphone number must be 10 digits.");
+        return;
+    }
+
+    if (!passwordPattern.test(password)) {
+        alert("Password must be at least 8 characters, include at least one letter and one number.");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    // Save data to local storage if validation passes
+    localStorage.setItem("registrationData", JSON.stringify({ username, email, cellphone, password }));
+    alert("Registration successful!");
+
+    // Redirect or reset form (based on your choice)
+    window.location.href = "login.html";
+});
+/* Here */
+
+
+
+
+     //local storage - BEGINS
+   /*  document.getElementById("registrationForm").addEventListener("submit", function(event) {
+                    // Prevent form submission 
+                    event.preventDefault(); 
+          
+                  // Get form data & Store in Variables
+                  var name = document.getElementById("regUsername").value;
+                  var email = document.getElementById("regMail").value;
+                  var cellNo = document.getElementByID("regCellphone").value; 
+                  var password = document.getElementById("regPassword").value;
+                  var confirmPassword = document.getElementById("regConPassword").value;
+
+                  // Save form data to local storage
+                  localStorage.setItem("registrationFormData", JSON.stringify({ name: name, email: email, cellNo:cellNo, message: message }));
+          
+                  // Redirect or show confirmation message
+                  // You can customize this part as needed
+                  // Redirect to index.html
+                  window.location.href = 'index.html'; 
+              });
+          
+              // Restore form data from local storage if available
+              //window library within we use the addEventListener Method 
+              window.addEventListener("DOMContentLoaded", function() {
+                  var savedData = localStorage.getItem("lgFormData");
+                  if (savedData) {
+                      var formData = JSON.parse(savedData);
+                      document.getElementById("lgUsername").value = formData.name;
+                      document.getElementById("lgMail").value = formData.email;
+                      document.getElementById("lgPassword").value = formData.password;
+                  }
+              });*/
+              //local storage - ENDS
+    </script>
+</body>
+</html>
