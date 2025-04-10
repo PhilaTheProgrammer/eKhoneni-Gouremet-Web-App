@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" description="Phila Mkhize">
+    <meta name="description" content="This is the Ekhoneni Gourmet website. A local fast food resturant.">
+    <meta name="keywords" content="Ekhoneni Gourmet, Fast Food, Resturant, Local Food, Take Away, Pietermaritzburg, South Africa">
+    
+    <!-- BOX ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="main.css">
+    <title>eKhoneni Gourmet - The Local Fast Resturant</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav_bar">
+           <img id="logo" src="Ekhoneni Gourmet.png">
+           <a href="index.html" class="title">Ekhoneni Gourmet</a>
+           <ul class="nav_items">   
+               <li><a href="#home">HOME</a></li>
+               <li><a href="#menu">MENU</li>     
+               <li><a href="#about">ABOUT</a></li>
+               <li><a href="#reservation">RESERVATION</a></li>
+               <li><a class="loglink" href="login.html">JOIN US!</a></li>
+           </ul>
+        </nav>
+    </header>
+ 
+        <ul class="contact-details" id="contact-details">
+            <li><p class="email"> <i class='bx bx-envelope'></i> Email: ekhonenigourmet@gmail.com</p></li>
+            <li><p class="telephone"> <i class='bx bx-phone'></i> Contact: 033 456 8743 </p></li>
+        </ul>
+
+        <!-- Home Section -->
+        <section class="home"  id="home">
+            <div class="home_content">
+                <h2>The Local Fast Food Resturant</h2>
+                <p>Welcome to Ekhoneni Gourmet, the local fast food resturant.</p>
+                <a href="menu.html">Make An Order</a>
+            </div>   
+        </section>
+
+         <!-- Menu Section -->
+         <section class="menu" id="menu">
+            <div class="menu_container">
+                <h2>Menu</h2>
+                <div class="menu_content">
+                   <div id="offerCard">
+                       <div id="cardDetails">
+                          <img src="Burger Meal.jpg">
+                          <p>The Mega Gourmet Burger with the signature sauce.</p>
+                          <button id="buyBTN" onclick="alert('50% of Gourmet Burger')">BUY <i class='bx bxs-chevrons-right'></i></button>
+                       </div>
+                    </div>
+
+                    <div id="menu_intro">
+                        <div id="menu_explore">
+                           <p>Explore our food menu. Pick your breakfast, lunch and dinner.</p>
+                           <button id="exploreBTN">EXPLORE <i class='bx bxs-chevrons-right'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>EKHONENI GOURMET!? WHO ARE THEY?</h2>
+            <div class="about_container">
+                <div class="about_content">
+                    <img src="CHEF6.jpg" alt="Picture" title="Chef Xavier">
+                  <!--   <p>Chef Xavier Mkhize is the head chef and owner of Ekhoneni Gourmet. He has been in the food industry for over 10 years and has a passion for creating delicious and unique dishes.</p> -->
+                    <div class="about_intro">
+                        <p>Ekhoneni Gourmet has been around the corner serving up the locals with their favorite food. Learn more about us.</p>
+                        <button id="aboutBTN">Learn More <i class='bx bxs-chevrons-right'></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation">
+            <div class="form_container">
+                <h2>Book A Table</h2>
+
+                <div class="res_content">
+                    <p>We are happy to serve you in the comfort of our provided space. Come, join us and enjoy your meal!</p>
+                </div>
+
+                <button id="reserveBTN">RESERVATION <i class='bx bxs-chevrons-right'></i></button>
+              
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <div class="businessInfo">
+                    <img src="Ekhoneni Gourmet.png" class="logo">
+                    <a href="index.html" class="footTitle">Ekhoneni Gourmet</a>
+                    <p>Ekhoneni Gourmet is a local fast food resturant ready to serve the local community with delicious dishes and refreshing beverages.</p>
+                    <div class="media">
+                    <!-- Social Media Icons  -->
+    
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-whatsapp-square' ></i>
+                    <i class='bx bxl-tiktok'></i>
+                    <i class='bx bxl-instagram'></i>
+                    </div>
+                </div>
+
+                <div class="businessLocation">
+                    <h3>Our Location</h3>
+                    <address>Unit 1, 3201 Fj Sithole Rd,<br> Imbali, Pietermaritzburg, 3201</address>
+                </div>
+
+                <div class="businessLinks">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="reservation.html">Book A Table</a></li>
+                    </ul>
+                </div>
+
+                <div class="businessTimes">
+                    <h3>Opening Hours</h3>
+                    Sunday to Wednesday<br>
+                    <i class='bx bx-time-five'></i>8:00 am - 5:00 pm
+                    <br>
+                    Thursday, Friday, Saterday<br>
+                    <i class='bx bx-time-five'></i> 9:00 am - 12:30am
+                </div>
+            </div>
+            <hr>
+            <!-- Last Layer -->
+            <div class="copyrightDetails">
+             <div class="copyright">   
+               <p>Copyright &copy; 2024 Ekhoneni Gourmet - The Local Food Store</p>
+             </div>
+            <div class="powered">
+            <p>&copy; Powered by PhilaWebDev</p>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

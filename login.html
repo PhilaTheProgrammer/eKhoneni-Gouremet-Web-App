@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" description="Phila Mkhize">
+    <meta name="description" content="This is the Ekhoneni Gourmet website. A local fast food resturant.">
+
+     <!-- BOX ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="log.css">
+    <title>Ekhoneni Gourmet: The Local Fast Food Resturant</title>
+</head>
+
+<body>
+
+   <MAIN>
+    <section class="lgContainer">
+        <button type="button" id="lgBackBTN" onclick="lgNav();">BACK</button>
+
+           <div class="lgContent">
+            <form class="lgForm" id="lgForm">
+                <h2>Login</h2>
+
+                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Username" name="Username" id='lgUsername' required>
+                
+                <i class='bx bxl-gmail'></i>
+                <input type="text" placeholder="Gmail" name="Gmail" id='lgMail'required>
+                
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="Password" name="Password" id="lgPassword" required>
+                
+                <div class="lg2">
+                    <input type="checkbox" name="Reminder">
+                    <p style="display: inline;">Remember Me!</p>
+                    <p>I DO NOT HAVE LOGIN DETAILS. <a href="register.html">Create New Account!</a></p>
+                    <button type="submit" id="lgBTN" onclick="lgNav();">LOGIN</button>
+                </div>
+                </form>
+           </div>
+    </section>
+   </MAIN>
+
+    <FOOTER>
+        <div class="copyrightDetails">
+            <div class="copyright">   
+              <p>&copy;Copyright 2024 Ekhoneni Gourmet - The Local Food Store</p>
+            </div>
+           <div class="powered">
+           <p> Powered by PhilaWebDev</p>
+           </div>
+    </FOOTER>
+
+    <script>
+        //Button Naviagtion - Starts
+       document.getElementById('lgBackBTN').addEventListener("click", function(){
+       window.location.href="index.html";
+       });
+
+       document.getElementById("lgBTN").addEventListener("click", function(){
+        window.location.href="index.html";
+       });
+       //Button Navigation - Ends
+/* HERE */
+// Add event listener for form submission
+document.getElementById("lgForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values
+    const username = document.getElementById('lgUsername').value.trim();
+    const email = document.getElementById('lgMail').value.trim();
+    const password = document.getElementById('lgPassword').value;
+
+    // Regular expression for email validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    // Check if fields are filled and email is valid
+    if (username === "") {
+        alert("Please enter your username.");
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (password === "") {
+        alert("Please enter your password.");
+        return;
+    }
+
+    // Retrieve registration data from local storage
+    const storedData = JSON.parse(localStorage.getItem("registrationData"));
+
+    // Validate login credentials
+    if (storedData && storedData.username === username && storedData.email === email && storedData.password === password) {
+        alert("Login successful!");
+        window.location.href = "dashboard.html";  // Redirect to dashboard or homepage
+    } else {
+        alert("Invalid username, email, or password.");
+    }
+});
+/* HERE */
+
+
+/*
+           //local storage - BEGINS
+    
+           // Retrieve username and password from local storage, if available
+                document.addEventListener("DOMContentLoaded", function() {
+                const storedUsername = localStorage.getItem("username");
+                const storedEmail = localStorage.getItem("email");
+                const storedPassword = localStorage.getItem("password");
+            
+                if (storedUsername && storedPassword) {
+                document.getElementById("lgUsername").value = storedUsername;
+                doucment.getElementById("lgMail").value = storeEmail;
+                document.getElementById("lgPassword").value = storedPassword;
+                }
+            });
+
+                //identify the form we are storing information for by it's ID
+                //then add AddEventlistener Method
+                document.getElementById("lgForm").addEventListener("submit", function(event) {
+                    // Prevent form submission 
+                    event.preventDefault(); 
+          
+                  // Get form data
+                  var name = document.getElementById("lgUsername").value;
+                  var email = document.getElementById("lgMail").value;
+                  var password = document.getElementById("lgPassword").value;
+          
+                  // Save form data to local storage
+                  localStorage.setItem("lgFormData", JSON.stringify({ name: name, email: email, password: password }));
+          
+                  // Redirect or show confirmation message
+                  // You can customize this part as needed
+                  // Redirect to index.html
+                  window.location.href = 'index.html'; 
+              });
+          
+              // Restore form data from local storage if available
+              //window library within we use the addEventListener Method 
+              window.addEventListener("DOMContentLoaded", function() {
+                  var savedData = localStorage.getItem("lgFormData");
+                  if (savedData) {
+                      var formData = JSON.parse(savedData);
+                      document.getElementById("lgUsername").value = formData.name;
+                      document.getElementById("lgMail").value = formData.email;
+                      document.getElementById("lgPassword").value = formData.password;
+                  }
+              });
+              //local storage - ENDS*/
+    </script>
+</body>
+</html>
