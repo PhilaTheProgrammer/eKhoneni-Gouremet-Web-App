@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <title>eKhoneni Gourmet - The Local Fast Food Resturant</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav_bar">
+           <img id="logo" src="Ekhoneni Gourmet.png">
+           <a href="index.html" class="title">Ekhoneni Gourmet</a>
+           <ul class="nav_items">
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="menu.html">MENU</li>  
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="reservation.html">RESERVATION</a></li>
+               <li><a class="loglink" href="login.html">JOIN US!</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <MAIN>
+        <section class="respage">
+            <div class="resContainer">
+                <h2>Book A Table</h2>
+
+                <form class="reservationForm" id="reservationForm">
+                    <div class="input_area">
+                       <i class='bx bxs-user'></i>
+                       <input type="text" placeholder="Firstnames" name="Firstnames" id="Firstnames" required>
+                    </div>
+
+                    <div class="input_area">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Surname" name="Surname" id="Surname" required>
+                    </div>
+
+                    <div class="input_area">
+                        <i class='bx bxs-phone'></i>
+                        <input type="text" placeholder="Cell Number" name="Cellnumber" id="Cellnumber" required>
+                    </div>
+                    
+                    <div class="input_area">
+                        <input type="date" placeholder="Date" name="Date" id="resDate" required>
+                    </div>
+
+                    <div class="input_area">
+                        <input type="time" placeholder="Time" name="Time" id="resTime" required>
+                    </div>
+
+                    <button type="button" id="resBTN" onclick="submitAndClearForm();" >Reserve A Table</button>
+                    <button type="button" id="backBTN" onclick="clearForm();">CLEAR</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Us - START -->
+         <section id="contactUs">
+            <article id='contactusContainer'>
+                <h2>Contact Us</h2>
+                <form id="contactusForm">
+                    <div class="input_area">
+                        <input type="text" placeholder="Name" name="Name" id="contactName" required>
+                     </div>
+
+                     <div class="input_area">
+                        <input type="text" placeholder="Email" name="Email" id="contactEmail" required>
+                     </div>
+                     
+                     <div class="textArea">
+                        <textarea id="textArea" placeholder="What would you like to say to us?" name="Message" required></textarea>
+                        <button type="button" id="clearBTN" onclick="clearFormC();">Clear</button>
+                        <button type="submit" id="contactusBTN">Submit <i class='bx bxs-chevrons-right'></i></button>
+                    <div>    
+                 </form>
+            </article>
+         </section>
+         <!-- Contact Us - END -->
+    </MAIN>
+    
+    <FOOTER>
+        <section class="RcopyrightDetails">
+            <div class="Rcopyright">   
+              <p>Copyright &copy; 2024 Ekhoneni Gourmet - The Local Food Store</p>
+            </div>
+           <div class="Rpowered">
+           <p>Powered by PhilaWebDev</p>
+        </section>
+    </FOOTER>
+
+    <script>
+        document.getElementById('resBTN').addEventListener("click", function(){
+         window.location.href="paygate.html";
+        });
+
+        function submitAndClearForm() {
+            // Submit the form
+            document.getElementById("myForm").submit();
+
+            // Optionally clear the form before submission (comment this line out if not needed)
+            document.getElementById("myForm").reset();
+        }
+
+        function clearForm() {
+            document.getElementById("reservationForm").reset(); // Resets the form
+        }
+
+        function clearFormC() {
+            document.getElementById("contactusForm").reset(); // Resets the form
+        }
+        
+        document.getElementById('contactusBTN').addEventListener("submit", function(){
+            alert("Thank you, be sure to check your emails.");
+        })
+    </script>
+</body>
+</html>

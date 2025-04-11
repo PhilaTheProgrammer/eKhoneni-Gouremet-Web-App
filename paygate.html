@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paygate.css">
+    <title>Ekhoneni Gourmet: The Local Fast Food Resturant</title>
+</head>
+<body>
+     <!-- Payment Gateway Form - START -->
+     <div class="container">
+        <form actions="">
+           <div class="row">
+               <div class="column">
+                   <h3 class="title">  Billing Address</h3> 
+                   <div class="input-box">
+                       <span> Full Name: </span>
+                       <input type="text" placeholder="Jacob Aiden" required>
+                   </div>   
+
+                   <div class="input-box">
+                       <span> Email: </span>
+                       <input type="email" placeholder="example@example.com" required>
+                   </div>   
+
+                   <div class="input-box">
+                       <span> Address: </span>
+                       <input type="text" placeholder="Room - Street - Locality" required>
+                   </div> 
+               
+                   <div class="input-box">
+                       <span> City: </span>
+                       <input type="text" placeholder="Berlin" required>
+                   </div>
+               
+                   <div class="flex">
+                       <div class="input-box">
+                            <span> State: </span>
+                            <input type="text" placeholder="Germany" required>
+                       </div>
+
+                   <div class="input-box">
+                            <span> Zip Code: </span>
+                            <input type="text" placeholder="123 456" required>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="column">
+                   <h3 class="title"> Payment </h3> 
+                      <div class="input-box">
+                          <span> Cards Accepted </span>
+                          <img src="Pictures/BankCardA1.png" alt="Bank Card Logos" required>
+                       </div>   
+
+                       <div class="input-box">
+                           <span> Name On Card: </span> <!-- Label-->
+                           <input type="text" placeholder="Mr. Jacob Aiden" required>
+                       </div>   
+
+                       <div class="input-box">
+                           <span> Credit Card </span> <!-- Label-->
+                           <input type="number" placeholder="1111 2222 3333 4444" required>
+                       </div> 
+       
+                       <div class="input-box">
+                           <span> Exp. Month: </span> <!-- Label-->
+                           <input type="text" placeholder="August" required> <!-- textbox -->
+                       </div>
+       
+                       <div class="flex">
+                           <div class="input-box" >
+                               <span> Exp. Year: </span> <!-- Label-->
+                               <input type="number" placeholder="2026" required> <!-- textbox -->
+                           </div>
+
+                           <div class="input-box">
+                               <span> CVV: </span> <!-- Label-->
+                               <input type="number" placeholder="123" required> <!-- textbox -->
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+               <button type="submit" class="btn" id="btnPay"> Submit </button>
+               <button type="button" class="btn" id="btnBack"> Back </button>
+
+               <script>
+                    document.getElementById("btnPay").addEventListener("click", function() {
+                    window.location.href = 'index.html';
+                    alert("Thank you! Please check your email and confirm the reservation. Cancelations are expensive.");
+                   });
+
+                   document.getElementById("btnBack").addEventListener("click", function() {
+                    window.location.href = 'reservation.html';
+                   });
+               </script>
+          </form>
+       </div>
+       <!-- Payment Gateway - ENDS -->
+</body>
+</html>
