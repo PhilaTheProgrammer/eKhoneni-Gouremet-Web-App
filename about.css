@@ -1,0 +1,391 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap);
+
+/* || GENERAL SETUP */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+/* || VARIABLES */
+:root {
+    --primary-color: rgb(233, 178, 26);
+    --secondary-color: rgb(139, 5, 192);
+    --text-color: white;
+    --background-color: rgb(27, 58, 77);
+    --font-family: 'Poppins', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+    --font-size: 20px;
+}
+
+/* || NAVIGATION BAR */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 178, 26);
+    height: 5vh;
+    width: 100%;
+    box-shadow: 1px 2px 5px -10px white;
+}
+
+/* Navigation Bar Design */
+.nav_bar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 18vh;
+    background-color: var(--primary-color);
+    max-width: 1500px;
+    box-shadow: 1px 2px 5px white;
+}
+
+#logo{
+    position: absolute;
+    top: 26px;
+    left: 25px;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 5px;
+}
+
+#logo:hover{
+    animation-name: Pulse;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    flex-shrink: 3;
+}
+
+@keyframes Pulse{
+    0% { transform: scale(1);
+ }
+    25% { transform: scale(1.2);
+ }
+    50% { transform: scale(1.3);
+ }
+    75% { transform: scale(1.2);
+ }
+   100% { transform: scale(1);
+ } 
+}
+
+.title{
+    position: absolute;
+    top: 6vh;
+    left: 23vh;
+    text-align: center;
+    color:black;
+    font-weight: 700;
+    font-size: 4.5vh;
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 5px white;
+}
+
+.title:hover{
+    color: white;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    flex-shrink: 3;
+}
+
+.nav_items{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vh;
+    position: absolute;
+    top: 7vh;
+    left: 95vh;
+    list-style: none;
+    color: white;
+    font-weight: 700;
+    font-family:  "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: Pulse;
+}
+
+.nav_items a{
+    transition: all 0.3s linear;
+    color: black;
+    text-decoration: none;
+    text-shadow: 1px 2px 5px white;
+}
+
+.nav_items a:hover{
+    color: white;
+    animation-name: Pulse2;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes Pulse2{
+    0% { transform: scale(1);
+    }
+    25% { transform: scale(1.2);
+    }
+    50% { transform: scale(1.3);
+    }
+    75% { transform: scale(1.2);
+    }
+    100% { transform: scale(1);
+    }
+}
+
+.loglink{
+    background-color: rgb(250, 212, 108);
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#aboutIntro{
+    background-color: rgb(233, 178, 26);
+    background-image: url(Register-BG.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 18vh;
+    left: 0px;
+}
+
+#aboutIntro h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 9vh;
+    text-shadow: 3px 4px black;
+    position: relative;
+    top: 4vh;
+    color: rgb(233, 178, 26);
+}
+
+.introContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 6vh; 
+    position: relative;
+    top: 15vh; 
+}
+
+.introContent{
+    border: 2px solid rgb(233, 178, 26);
+    border-radius: 5vh;
+    box-shadow: 2px 3px black;
+    height: 67vh;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 4vh;
+    position: relative;
+    left: 10vh;
+    bottom: 5vh; 
+    margin-left: 5vh;
+}
+
+.introContent h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 8vh;
+    text-shadow: 3px 4px black;
+    position: relative;
+    bottom: 2vh;
+    color: rgb(233, 178, 26);
+}
+
+.introContainer img{
+    border: 2px solid rgb(233, 178, 26);
+    border-radius: 5vh;
+    height: 40%;
+    width: 40%;
+    position: relative;
+    left: 14vh;
+    bottom: 5vh;
+    margin-right: vh;
+    box-shadow: 2px 3px black;
+}
+
+.introContainer img:hover{
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 2px 3px rgb(233, 178, 26);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+
+/* about SECTION 2  - START */
+
+#aboutMission{
+    background-color:  rgb(233, 178, 26);
+    height: 85vh;
+    width: 100%;
+    position: absolute;
+    top: 118vh;
+    left: 0px;
+}
+
+#aboutMission h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 8vh;
+    text-shadow:3px 4px rgb(255, 255, 255);
+    position: relative;
+    top: 6vh;
+}
+
+.missionContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 6vh;
+    position: relative;
+    top: 15vh;
+    left: 15vh;
+}
+
+.missionContent{
+    border: 2px solid rgb(233, 178, 26);
+    border-radius: 5vh;
+    box-shadow: 2px 3px black;
+    height: 50vh;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 4vh;
+    margin-left: 5vh;
+    position: relative;
+    top: -4vh;
+}
+
+.missionContent h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 7vh;
+    text-shadow: 3px 4px black;
+    position: relative;
+    top: 2vh;
+    color: rgb(233, 178, 26);
+}
+
+.missionContainer p{
+    position: relative;
+    top: 5vh;
+}
+
+.missionContainer img{
+    border: 2px solid rgb(233, 178, 26);
+    border-radius: 5vh;
+    height: 40%;
+    width: 40%;
+    position: relative;
+    bottom: 5vh;
+    margin-right: vh;
+    box-shadow: 2px 3px black;
+}
+
+.missionContainer img:hover{
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 2px 3px rgb(233, 178, 26);
+}
+
+/* Staff Section */
+#ekhoneniStaff{
+    background-image: url(Staff-BG.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 203vh;
+    left: 0px;
+}
+
+#ekhoneniStaff h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 8vh;
+    text-shadow: 3px 4px black;
+    position: relative;
+    top: 1vh;
+    color: rgb(233, 178, 26);
+}
+
+.cardsList{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vh;
+    position: relative;
+    top: 10vh;
+}
+
+.cardProfile{
+    background-color: rgb(233, 178, 26);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 6.5vh;
+    height:  60vh;
+    width: 40vh;
+    box-shadow: 2px 3px black;   
+}
+
+.cardProfile img{
+    border: px solid black;
+    border-radius: 10px;
+    height:  30vh;
+    width: 40vh;
+}
+
+.cardProfile:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 3px rgb(255, 255, 255);
+}
+
+.cardProfile p{
+    padding: 0vh;
+    text-shadow: 1px 2px white;
+}
+
+/* Footer - Start */
+.AcopyrightDetails{
+    display: flex;
+    flex-direction: row;
+    column-gap: 110vh;
+    font-size: small;
+    background-color: rgb(233, 178, 26);
+    position: absolute;
+    left: 0px;
+    top: 300vh;
+    width: 100%;
+    height: 45px;
+}
+
+.Acopyright{
+ position: relative;
+ top: 2vh;
+ left: 5vh;
+ font-weight: 700;
+ text-shadow: 1px 2px rgb(255, 255, 255);
+}
+
+.Apowered{
+    position: relative;
+    top: 2vh;
+    font-weight: 700;
+    text-shadow: 1px 2px rgb(255, 255, 255);
+}
