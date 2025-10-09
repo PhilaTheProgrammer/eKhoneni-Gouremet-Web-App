@@ -26,3 +26,4 @@ The eKhoneni Gourmet Web App Project is a web applicatin for a local fast food r
 Developer: Phila Mkhize
 GitHub: PhilaTheProgrammer
 Email: mkhizep971@gmail.com
+Contact: 062 068 6734 
